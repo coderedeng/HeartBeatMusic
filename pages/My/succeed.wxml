@@ -1,0 +1,40 @@
+<!--pages/My/succeed.wxml-->
+<view class="songList">
+  <view class="song">
+    <image class="user_img" src="{{userMsg.avatarUrl}}"></image>
+    <image class="user_back" src="{{userMsg.backgroundUrl}}"></image>
+    <text class="user_name">{{userMsg.nickname}}</text>
+    <text class="user_name1">{{userMsg.signature}}</text>
+    <text class="user_followeds">粉丝:{{userMsg.followeds}}</text>
+    <text class="user_follows">关注:{{userMsg.follows}}</text>
+    <button bindtap="out" class="out">注销登录</button>
+  </view>
+</view>
+
+ <scroll-view scroll-x  class="songs">
+    <view class="playList" id="{{index}}" bindtap="getId" wx:for="{{playList}}" wx:key="{{index}}">
+     <image class="songs_list" src="{{playList[index].coverImgUrl}}"></image>
+      <text class="songs_name">{{playList[index].name}}</text>
+    </view>
+</scroll-view>
+
+<view class="count">
+<text class='{{indexMusic.length==0? "show":"hide"}}'>列表为空！</text>
+<view bindtap="play" id="{{index}}" class="count_all" wx:for="{{indexMusic}}" wx:key="{{index}}">
+    <image src="{{indexMusic[index].al.picUrl}}"></image>
+      <view  class="count_c">
+        <text class="count_text">
+          <text>{{indexMusic[index].name}}</text>
+          <text class='{{indexMusic[index].alia.length>=1? "show":"hide"}}'> - </text>
+          <text>{{indexMusic[index].alia}}</text>
+          <text  class='{{index==listId? "green":""}}'></text>
+        </text>
+      <view>
+      {{indexMusic[index].ar[0].name}}
+      <text class='{{indexMusic[index].ar.length>1? "show":"hide"}}'>&</text>
+      {{indexMusic[index].ar[1].name}}
+      </view>
+    </view>
+  </view>
+</view>
+

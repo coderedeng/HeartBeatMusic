@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/Ranklist/Ranklist",
+    "pages/Mv/Mv",
+    "pages/My/My",
+    "pages/My/succeed"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#42B983",
+    "navigationBarTitleText": "音乐",
+    "navigationBarTextStyle":"white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "tabBar":{
+    "color": "#333",
+    "selectedColor": "#CE7578",
+    "backgroundColor": "#fff",
+    "position":"top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/Ranklist/Ranklist",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/Mv/Mv",
+        "text": "MV"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的"
+      }
+    ]
+  }
+}

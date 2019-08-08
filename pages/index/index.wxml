@@ -1,0 +1,70 @@
+<view class="index">
+<view class="index_top">
+<input bindblur="getMusic"  bindinput="getValue" placeholder="请输入歌曲名称、歌手"></input>
+<image bindtap="getMusic" src="../../images/search.png"></image>
+</view>
+</view>
+<view class="index_count">
+<text wx:if="{{isShow}}">共{{musicList.songCount}}个结果</text>
+</view>
+<!-- {{item.name}}{{item.artists[0].name}} -->
+<view class="count">
+<view wx:if="{{isHide}}" bindtap="play1" id="{{index}}" class="count_all" wx:for="{{musicList.songs}}" wx:key="{{index}}">
+<text class='{{index==listId? "green1":""}}'></text>
+  <image src="{{item.artists[0].img1v1Url}}"></image>
+  <view class="count_c">
+  <text>{{item.name}}</text>
+  <view>{{item.artists[0].name}} - {{item.name}}</view>
+  </view>
+  </view>
+</view>
+
+<view class="banner">
+  <swiper indicator-dots="true" autoplay="true" circular="true">
+    <swiper-item wx:for="{{banner}}" wx:key="index">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+  <view class="nav_list">
+    <view>
+    <image src="../../images/day.png"></image>
+    <text>每日推荐</text>
+    </view>
+    <view>
+    <image src="../../images/hot.png"></image>
+    <text>热门歌单</text>
+    </view>
+    <view>
+    <image src="../../images/fm.png"></image>
+    <text>私人电台</text>
+    </view>
+    <view>
+    <image src="../../images/music.png"></image>
+    <text>新歌速递</text>
+    </view>
+  </view>
+
+  <view class="count">
+    <view bindtap="play" id="{{index}}" class="count_all" wx:for="{{indexMusic}}" wx:for-iteam="data" wx:key="{{index}}"> 
+    <image src="{{indexMusic[index].al.picUrl}}"></image>
+      <view  class="count_c">
+      
+      <text class="count_text">
+      <text>{{indexMusic[index].name}}</text>
+      <text class='{{indexMusic[index].alia.length>=1? "show":"hide"}}'> - </text>
+      <text>{{indexMusic[index].alia}}</text>
+      <text  class='{{index==listId? "green":""}}'></text>
+      </text>
+      <view>
+      {{indexMusic[index].ar[0].name}}
+      <text class='{{indexMusic[index].ar.length>1? "show":"hide"}}'>&</text>
+      {{indexMusic[index].ar[1].name}}
+      </view>
+    </view>
+  </view>
+  
+  
+
+</view>

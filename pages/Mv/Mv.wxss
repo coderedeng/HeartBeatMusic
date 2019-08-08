@@ -1,0 +1,80 @@
+/* pages/Mv/Mv.wxss */
+.section{
+width: 100%;
+text-align: center;
+margin-top: 20rpx;
+border-bottom: 1rpx solid #ccc;
+padding-bottom: 20rpx; 
+}
+.section .picker{
+width: 100%;
+margin: 0 10%;
+position: relative;
+font-size: 26rpx;
+color: #333;
+}
+.section .right{
+position: absolute;
+border-top:10rpx solid #ccc;
+border-right:10rpx solid  rgba(0,0,0,0);
+border-bottom:10rpx solid rgba(0,0,0,0);
+border-left:10rpx solid  rgba(0,0,0,0);
+bottom: 0rpx;
+right: -40rpx;
+}
+.mv_count{
+  width: 100%;
+  margin-top: 20rpx;
+  margin-left: 5rpx;
+}
+.mv_list{
+  margin: 5rpx auto;
+  width: calc(100%/2);
+  height: 250rpx;
+  overflow:hidden;
+  display: inline-block;
+  box-shadow: 0rpx 0rpx 5rpx #ccc;
+  padding-bottom: 80rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+.mv_list image{
+  width:100%;
+  height: 220rpx;
+  border: 10rpx solid #fff;
+  z-index: 2;
+}
+.mv_video{
+  width: 90%;
+  height: 200rpx;
+  padding: 10rpx;
+  margin-left:6rpx;
+  top: 10rpx;
+  left: 6rpx;
+  margin-top: 100rpx;
+}
+.mv_title{
+  width: 90%;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 10rpx;
+  position: absolute;
+  bottom: 50rpx;
+  
+}
+.mv_name{
+  font-size: 23rpx;
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+  color: #666;
+  position: absolute;
+  bottom: 15rpx;
+}
+.none{
+  display: none;
+}
+.block{
+ margin-top: 0rpx;
+}

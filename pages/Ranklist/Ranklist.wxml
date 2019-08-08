@@ -1,0 +1,25 @@
+<!--pages/Ranklist/Ranklist.wxml-->
+ <scroll-view scroll-x class="scroll">
+    <view class="scroll_view" bindtap="getId" wx:for="{{navlist}}" id="{{index}}" 
+    wx:key="{{index}}">
+      {{navlist[index].name}}
+    </view>
+  </scroll-view>
+<view class="count">
+    <view bindtap="play" id="{{index}}" class="count_all" wx:for="{{indexMusic}}" wx:for-iteam="data" wx:key="{{index}}">
+    <image src="{{indexMusic[index].al.picUrl}}"></image>
+      <view  class="count_c">
+        <text class="count_text">
+          <text>{{indexMusic[index].name}}</text>
+          <text class='{{indexMusic[index].alia.length>=1? "show":"hide"}}'> - </text>
+          <text>{{indexMusic[index].alia}}</text>
+          <text  class='{{index==listId? "green":""}}'></text>
+        </text>
+      <view>
+      {{indexMusic[index].ar[0].name}}
+      <text class='{{indexMusic[index].ar.length>1? "show":"hide"}}'>&</text>
+      {{indexMusic[index].ar[1].name}}
+      </view>
+    </view>
+  </view>
+</view>

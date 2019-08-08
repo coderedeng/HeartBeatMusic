@@ -1,0 +1,20 @@
+<!--pages/Mv/Mv.wxml-->
+<view class="section">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <text class="picker">{{multiArray[0][multiIndex[0]]}}<text class="right"></text></text>
+    <text class="picker">{{multiArray[1][multiIndex[1]]}}<text class="right"></text></text>
+    <text class="picker">{{multiArray[2][multiIndex[2]]}}<text class="right"></text></text>
+  </picker>
+</view>
+<!-- wx:if="{{isShow}}" -->
+<view class="mv_count">
+<view class="mv_list" catchtap="play" id="{{index}}" wx:for="{{mv}}" wx:key="{{index}}">
+<image class='{{index==cid?"none":""}}' src="{{mv[index].cover}}"></image>
+<video class='mv_video {{index==cid?"block":""}}' src="{{mvUrl}}"></video>
+<view class="mv_title">{{mv[index].name}}</view>
+<view class="mv_name">{{mv[index].artistName}}</view>
+</view>
+
+
+</view>
+
